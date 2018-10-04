@@ -5,9 +5,7 @@ var AppRegistry = require('react-native').AppRegistry;
 export default App = function(){
   console.log("to aqui")
   return (
-    <View>
     <Text>Meu primeiro app</Text>
-    </View>
   );
 };
 
