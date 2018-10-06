@@ -1,12 +1,21 @@
-var React = require('react');
-var Text = require('react-native').Text;
-var AppRegistry = require('react-native').AppRegistry;
+import React from 'react';
+import {View, Text, Button, AppRegistry} from 'react-native';
 
-export default App = function(){
-  console.log("to aqui")
+const geraNumeroAleatorio = () => {
+  var numeroAleatorio = Math.random();
+  alert(Math.floor(numeroAleatorio*100));
+}
+
+export default App = () => {
   return (
-    <Text>Meu primeiro app</Text>
+    <View>  
+      <Text>gerador de numeros randomicos</Text>
+      <Button
+        title ="Gerar um numero aleatorio"
+        onPress={geraNumeroAleatorio} 
+      />
+    </View>
   );
 };
 
-AppRegistry.registerComponent('app1', function(){ return App });
+AppRegistry.registerComponent('app1', () => App);
